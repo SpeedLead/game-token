@@ -22,7 +22,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - Duration
   - Initialize
   - MinBidIncrementPercentage
-  - GameToken
+  - GameToken ?
   - Owner
   - Pause
   - Paused
@@ -43,7 +43,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - DEFAULT_ADMIN_ROLE
   - MINTER_ROLE
   - PAUSER_ROLE
-  - BalanceOf
+  - BalanceOf:
   - BalanceOfBatch
   - Burn
   - BurnBatch
@@ -80,7 +80,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - MINTER_ROLE
   - PAUSER_ROLE
   - Approve
-  - BalanceOf
+  - BalanceOf:
   - Burn
   - GetApproved
   - GetRoleAdmin
@@ -92,7 +92,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - Mint
   - Name
   - Owner
-  - OwnerOf
+  - OwnerOf:
   - Pause
   - Paused
   - RenounceOwnership
@@ -109,3 +109,36 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - TransferFrom
   - TransferOwnership
   - Unpause
+
+- ERC721
+  - DEFAULT_ADMIN_ROLE
+  - MINTER_ROLE
+  - PAUSER_ROLE
+  - Allowance
+  - Approve
+  - BalanceOf
+  - Burn
+  - BurnFrom
+  - Cap
+  - Decimals
+  - DecreaseAllowance
+  - Deposit
+  - GetRoleAdmin
+  - GetRoleMemeber
+  - GetRoleMemberCount
+  - GrantRole
+  - HasRole
+  - IncreaseAllowance
+  - Mint
+  - Name
+  - Pause
+  - Paused
+  - RenounceRole
+  - RevokeRole
+  - SupportsInterface
+  - Symbol
+  - TotalSupply
+  - Transfer
+  - TransferFrom
+  - Unpause
+  - Withdraw
