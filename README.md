@@ -5,6 +5,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
 ## Deployed contracts
 
 - Avalanche fuji c-chain testnet
+  - Racing Rinkeby address: [0xcc8C5aCF5367166576461363da680aF6B5C6e3D6](https://rinkeby.etherscan.io/address/0xcc8C5aCF5367166576461363da680aF6B5C6e3D6)
   - ERC721Plus address: [0xA1104C462C00A365FdcCd6a640623DeEF5417b91](https://testnet.snowtrace.io/address/0xA1104C462C00A365FdcCd6a640623DeEF5417b91)
   - AuctionHouse address: [0xde739456576C6Dc97d399F2680d3e3a9DFD164EF](https://testnet.snowtrace.io/address/0xde739456576C6Dc97d399F2680d3e3a9DFD164EF)
   - ERC1155Plus address: [0xA813c074571993278392c203de4c3522D1cE980d](https://testnet.snowtrace.io/address/0xA813c074571993278392c203de4c3522D1cE980d)
@@ -15,6 +16,16 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - ERC1155.json
 
 ## Major Functions
+
+- Racing
+  - Participate
+  - GetRacerArray
+  - UpdatePrizes
+  - SetStartDate
+  - Claim
+  - PrizeBalance
+  - PrizeUpdated
+  - StartDate
 
 - Auction
   - Auction
