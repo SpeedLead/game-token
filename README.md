@@ -21,7 +21,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
   - Participate(): Before a racing starts, any user can send some amount of eth to the contract and enter a racing. After a racing starts, users can't participate the racing.
   - GetRacerArray(): (TBD) The function will return a list of account addresses if they're kept in the contract. A better way to get account addresses is to subscribe events on the contract.
   - UpdatePrizes(racers, prizes): should be called from an authorized account the owner of which has the final racing result. The parameter of racers is an array of account addresses. The parameter of prizes is an array of prize amounts(value with 18 decimals). The function is called after a racing reult comes.
-  - SetStartDate(startDate): set the start time for the next racing. should be called from an authorized account. The format of startDate follows [Unix epoch time](https://www.epochconverter.com/).
+  - SetStartDate(startDate): set the start time for the next racing. should be called by the contract owner. The format of startDate follows [Unix epoch time](https://www.epochconverter.com/).
   - Claim(): Users can claim their accumulated prizes in the contract.
   - PrizeBalance[address]: the current accumlated prize amount.
   - PrizeUpdated: if the current racing prizes are updated.
