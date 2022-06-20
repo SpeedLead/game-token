@@ -5,7 +5,7 @@ This repo creates NFT contracts and interface files for the intended gaming proj
 ## Deployed contracts
 
 - Avalanche fuji c-chain testnet
-  - Racing Rinkeby address: [0xcc8C5aCF5367166576461363da680aF6B5C6e3D6](https://rinkeby.etherscan.io/address/0xcc8C5aCF5367166576461363da680aF6B5C6e3D6)
+  - Racing Rinkeby address: [0xa19cD2b04Bb70da9c0386d78e34c767ba2CA1bb0](https://rinkeby.etherscan.io/address/0xa19cD2b04Bb70da9c0386d78e34c767ba2CA1bb0)
   - ERC721Plus address: [0xA1104C462C00A365FdcCd6a640623DeEF5417b91](https://testnet.snowtrace.io/address/0xA1104C462C00A365FdcCd6a640623DeEF5417b91)
   - AuctionHouse address: [0xde739456576C6Dc97d399F2680d3e3a9DFD164EF](https://testnet.snowtrace.io/address/0xde739456576C6Dc97d399F2680d3e3a9DFD164EF)
   - ERC1155Plus address: [0xA813c074571993278392c203de4c3522D1cE980d](https://testnet.snowtrace.io/address/0xA813c074571993278392c203de4c3522D1cE980d)
@@ -18,10 +18,11 @@ This repo creates NFT contracts and interface files for the intended gaming proj
 ## Major Functions
 
 - Racing
+  - SetStartDate(minutesAfter): set the start time for the next racing. should be called by the contract owner. The new startDate will be set to the current time plus minutesAfter, say, SetStartDate(60) which means the racing will begin after 60 minutes. Participants have 60 minutes to send their eths.
   - Participate(): Before a racing starts, any user can send some amount of eth to the contract and enter a racing. After a racing starts, users can't participate the racing.
   - GetRacerArray(): (TBD) The function will return a list of account addresses if they're kept in the contract. A better way to get account addresses is to subscribe events on the contract.
-  - UpdatePrizes(racers, prizes): should be called from an authorized account the owner of which has the final racing result. The parameter of racers is an array of account addresses. The parameter of prizes is an array of prize amounts(value with 18 decimals). The function is called after a racing reult comes.
-  - SetStartDate(startDate): set the start time for the next racing. should be called by the contract owner. The format of startDate follows [Unix epoch time](https://www.epochconverter.com/).
+  - setGamingOwner(address): only the contract owner can call it. It sets the gaming owner address by which the updatePrizes function can be called.
+  - UpdatePrizes(racers, prizes): should be called from the account of the gaming owner who has the final racing result. The parameter of racers is an array of account addresses. The parameter of prizes is an array of prize amounts(value with 18 decimals). The function is called after a racing reult comes.
   - Claim(): Users can claim their accumulated prizes in the contract.
   - PrizeBalance[address]: the current accumlated prize amount.
   - PrizeUpdated: if the current racing prizes are updated.
